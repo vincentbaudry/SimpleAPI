@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  name: 'Default'
+  name: 'Ubuntu_172_16_10_87'
 
 variables:
   solution: '**/*.sln'
