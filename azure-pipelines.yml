@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  name: 'Ubuntu_172_16_10_87'
+  name: 'Local Agent 2.169'
 
 variables:
   solution: '**/*.sln'
