@@ -24,10 +24,12 @@ steps:
 - task: DotNetCoreCLI@2
 inputs:
   command: test
-  projects: '**\$(BuildConfiguration)\*test*.dll !**\obj\**'
+  #projects: '**\$(BuildConfiguration)\*test*.dll !**\obj\**'
+  projects: '**/*.csproj !**/*.Test.csproj'
   #projects: '**/*Test*.csproj'
   #projects: '**/*.csproj'
   #projects: '$(Parameters.projects)'
+
   arguments: '--configuration $(buildConfiguration)'
 
 - task: VSBuild@1
