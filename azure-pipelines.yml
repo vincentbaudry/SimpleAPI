@@ -24,7 +24,8 @@ steps:
 - task: DotNetCoreCLI@2
 inputs:
   command: test
-  projects: '**/*Test*.csproj'
+  projects: '**\$(BuildConfiguration)\*test*.dll !**\obj\**'
+  #projects: '**/*Test*.csproj'
   #projects: '**/*.csproj'
   #projects: '$(Parameters.projects)'
   arguments: '--configuration $(buildConfiguration)'
