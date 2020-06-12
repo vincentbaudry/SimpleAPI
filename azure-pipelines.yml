@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  name: 'Local Agent 2.169'
+  name: 'Default'
 
 variables:
   solution: '**/*.sln'
