@@ -26,11 +26,13 @@ inputs:
   command: test
   #projects: '**\$(BuildConfiguration)\*test*.dll !**\obj\**'
   #projects: '**/*.csproj !**/*.Test.csproj'
-  projects: '!**/*.Test.csproj **/*.csproj'
+  #projects: '!**/*.Test.csproj **/*.csproj'
   #projects: '**/*Test/*.csproj'
-  #projects: '**/*.csproj'
+  projects: '**/*.csproj'
   #projects: '$(Parameters.projects)'
-  arguments: '--configuration $(buildConfiguration)'
+  #projects: '**/*.csproj'
+  arguments: --output $(Build.ArtifactStagingDirectory)/src/xxx.EndToEnd.Integration.Tests
+  #arguments: '--configuration $(buildConfiguration)'
 
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
