@@ -47,7 +47,7 @@ inputs:
 - task: PublishBuildArtifacts@1
     displayName: 'publish artifacts'
       
-#comment 
+#comment2 
 #- task: VSBuild@1
 #  inputs:
 #    solution: '$(solution)'
